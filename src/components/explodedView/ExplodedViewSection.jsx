@@ -1,12 +1,9 @@
 import { useState, useRef, useEffect, useCallback, Component } from 'react';
 import { motion } from 'framer-motion';
 import {
-  Layers,
   Sparkles,
-  Info,
   Shield,
   Zap,
-  Gauge,
   Wind,
   Cpu,
   AlertTriangle,
@@ -59,8 +56,8 @@ class WebGLErrorBoundary extends Component {
 }
 
 export default function ExplodedViewSection() {
-  const [explosionProgress, setExplosionProgress] = useState(0.45); // Start with an inviting partial exploded preview
-  const [selectedId, setSelectedId] = useState('engine'); // Default highlight the powerhouse V10 engine
+  const [explosionProgress, setExplosionProgress] = useState(0); // Start with complete original car fully assembled
+  const [selectedId, setSelectedId] = useState('engine');
   const [hoveredId, setHoveredId] = useState(null);
   const [isolatedId, setIsolatedId] = useState(null);
   const [carColor, setCarColor] = useState('#00D4FF');
@@ -68,16 +65,17 @@ export default function ExplodedViewSection() {
   const [autoRotate, setAutoRotate] = useState(false);
   const [activePreset, setActivePreset] = useState(CAMERA_PRESETS[0]);
   const [isFullscreen, setIsFullscreen] = useState(false);
-  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(() =>
+    typeof window !== 'undefined' ? window.matchMedia('(prefers-reduced-motion: reduce)').matches : false
+  );
 
   const containerRef = useRef(null);
   const canvasRef = useRef(null);
   const animFrameRef = useRef(null);
 
-  // Check reduced motion preference
+  // Synchronize reduced motion preference changes
   useEffect(() => {
     const media = window.matchMedia('(prefers-reduced-motion: reduce)');
-    setPrefersReducedMotion(media.matches);
     const handler = (e) => setPrefersReducedMotion(e.matches);
     media.addEventListener('change', handler);
     return () => media.removeEventListener('change', handler);
