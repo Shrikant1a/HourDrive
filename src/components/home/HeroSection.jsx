@@ -98,10 +98,12 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center gap-2 bg-[#00D4FF]/10 border border-[#00D4FF]/25 rounded-full px-4 py-2 mb-6"
+              className="inline-flex items-center gap-2.5 bg-[#00D4FF]/10 border border-[#00D4FF]/25 rounded-full px-4 py-2 mb-6"
             >
               <div className="w-1.5 h-1.5 rounded-full bg-[#00D4FF] animate-pulse" />
               <span className="text-[#00D4FF] text-sm font-medium">India's Premier Hourly Car Rental Platform 🇮🇳</span>
+              <span className="text-white/20 text-xs hidden sm:inline">•</span>
+              <span className="text-white/70 text-xs font-normal hidden sm:inline">Built by <span className="text-white font-medium">ShriiTech Pvt Ltd</span></span>
             </motion.div>
 
             {/* Heading */}

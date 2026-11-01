@@ -87,9 +87,12 @@ export default function Navbar() {
                 <Car className="w-5 h-5 text-white" />
                 <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-[#00D4FF] to-[#6B6FFF] opacity-0 group-hover:opacity-20 blur-lg transition-all duration-300" />
               </div>
-              <div>
-                <span className="font-bold text-xl font-['Outfit'] text-white tracking-tight">
+              <div className="flex flex-col">
+                <span className="font-bold text-xl font-['Outfit'] text-white tracking-tight leading-none">
                   Hour<span className="gradient-text">Drive</span>
+                </span>
+                <span className="text-[10px] text-white/40 tracking-wider font-medium mt-0.5">
+                  by <span className="text-[#00D4FF]/80">ShriiTech Pvt Ltd</span>
                 </span>
               </div>
             </Link>
@@ -208,11 +211,14 @@ export default function Navbar() {
             <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setMenuOpen(false)} />
             <div className="absolute right-0 top-0 bottom-0 w-72 bg-[#0A1628] border-l border-white/10 flex flex-col">
               <div className="flex items-center justify-between p-6 border-b border-white/5">
-                <Link to="/" className="flex items-center gap-2">
+                <Link to="/" className="flex items-center gap-2.5">
                   <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#00D4FF] to-[#6B6FFF] flex items-center justify-center">
                     <Car className="w-4 h-4 text-white" />
                   </div>
-                  <span className="font-bold text-lg font-['Outfit'] text-white">Hour<span className="gradient-text">Drive</span></span>
+                  <div className="flex flex-col">
+                    <span className="font-bold text-lg font-['Outfit'] text-white leading-none">Hour<span className="gradient-text">Drive</span></span>
+                    <span className="text-[10px] text-white/40 tracking-wider font-medium mt-0.5">by <span className="text-[#00D4FF]/80">ShriiTech Pvt Ltd</span></span>
+                  </div>
                 </Link>
                 <button onClick={() => setMenuOpen(false)} className="text-white/50 hover:text-white">
                   <X className="w-5 h-5" />

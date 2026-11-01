@@ -6,6 +6,7 @@ import ExplodedViewSection from '../components/explodedView/ExplodedViewSection'
 import ExperienceSection from '../components/home/ExperienceSection';
 import HowItWorks from '../components/home/HowItWorks';
 import BecomeOwner from '../components/home/BecomeOwner';
+import AboutSection from '../components/home/AboutSection';
 import Testimonials from '../components/home/Testimonials';
 
 export default function HomePage() {
@@ -19,6 +20,7 @@ export default function HomePage() {
         <ExperienceSection />
         <HowItWorks />
         <BecomeOwner />
+        <AboutSection />
         <Testimonials />
       </main>
       <Footer />

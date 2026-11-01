@@ -1,6 +1,7 @@
 # HourDrive 🏎️⚡
 
-> **India's Premier 3D Interactive Hourly Car Rental & Peer-to-Peer Car Sharing Platform**
+> **India's Premier 3D Interactive Hourly Car Rental & Peer-to-Peer Car Sharing Platform**  
+> *Architected & Built by **ShriiTech Pvt Ltd***
 
 [![React](https://img.shields.io/badge/React-19-blue.svg)](https://react.dev/)
 [![Three.js](https://img.shields.io/badge/Three.js-r187-black.svg)](https://threejs.org/)
@@ -116,4 +117,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-Designed with ❤️ for automotive enthusiasts in India.
+Designed with ❤️ for automotive enthusiasts in India. Built by **ShriiTech Pvt Ltd**.

@@ -17,7 +17,10 @@ export default function Footer() {
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#00D4FF] to-[#6B6FFF] flex items-center justify-center shadow-lg group-hover:shadow-[0_0_20px_rgba(0,212,255,0.4)] transition-all duration-300">
                 <Car className="w-5 h-5 text-white" />
               </div>
-              <span className="font-bold text-xl font-['Outfit'] text-white">Hour<span className="gradient-text">Drive</span></span>
+              <div className="flex flex-col">
+                <span className="font-bold text-xl font-['Outfit'] text-white">Hour<span className="gradient-text">Drive</span></span>
+                <span className="text-[11px] text-white/40 tracking-wider">Built by <span className="text-[#00D4FF] font-medium">ShriiTech Pvt Ltd</span></span>
+              </div>
             </Link>
             <p className="text-white/50 text-sm leading-relaxed max-w-xs mb-6">
               The premium hourly car rental and peer-to-peer car-sharing platform. Discover extraordinary vehicles and drive on your terms.
@@ -110,8 +113,8 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-white/25 text-xs text-center sm:text-left">
-            © {year} HourDrive. All rights reserved. Built with passion for extraordinary drives.
+          <p className="text-white/30 text-xs text-center sm:text-left">
+            © {year} HourDrive. Built by <span className="text-white/70 font-medium">ShriiTech Pvt Ltd</span>. All rights reserved.
           </p>
           <div className="flex items-center gap-5">
             {['Privacy Policy', 'Terms of Service', 'Cookie Policy'].map((link) => (
